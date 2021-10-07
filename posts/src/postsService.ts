@@ -7,12 +7,12 @@ interface Post {
   title: string;
 }
 
-type postMsgs  = Record<string, Post>;
+export type Posts  = Record<string, Post>;
 
 export class PostsService {
   app: Express;
   server?: Server;
-  posts: postMsgs;
+  posts: Posts;
 
   constructor() {
     this.posts = {};
@@ -49,7 +49,7 @@ export class PostsService {
 
   run(port: number): void {
     this.server = this.app.listen(port, () => 
-      console.log(`server Listening on port ${port}`));
+      console.log(`PostsService is listening on port ${port}`));
   }
 
   stop(): void {
