@@ -6,3 +6,10 @@
 cd posts
 npm install
 ```
+
+## Install Comments Service
+
+```sh
+cd posts
+npm install
+```

@@ -36,7 +36,6 @@ describe('PostsService', () => {
       const { data } = await axios.get(POSTS_SERVICE_POST_URL);
       console.log(data);
     });
-
   });
   
   describe('GET Request tests', () => {
