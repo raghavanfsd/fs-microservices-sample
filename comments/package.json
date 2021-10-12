@@ -6,7 +6,8 @@
   "dependencies": {
     "axios": "^0.22.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "ts-node-dev": "^1.1.8"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
@@ -29,8 +30,9 @@
     "clean": "rm -rf build",
     "start:run": "nodemon build/index.js",
     "start:build": "tsc -w",
-    "start": "concurrently npm:start:*",
+    "dev": "concurrently npm:start:*",
     "build": "tsc",
+    "start": "ts-node-dev src/index.ts",
     "test:dev": "jest -w --no-cache",
     "test": "jest",
     "test:ci": "npm run test -- --verbose",
